@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="messages"></div>
+
+    <div id="sendMsg">
+        <input type="text" id="msgTxt" placeholder="ENTER YOUR MSG...">
+        <input type="submit" id="msgBtn" value="send" onclick="module.sendMsg()">
+    </div>
+
+    <script>
+        module = {
+
+        }
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, set, remove, onChildAdded, onChildRemoved } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyA3EBmiQkrFSeW5_GeoudHo9AdYw6Kxzmc",
+          authDomain: "ys-sb-e0e06.firebaseapp.com",
+          projectId: "ys-sb-e0e06",
+          storageBucket: "ys-sb-e0e06.appspot.com",
+          messagingSenderId: "1007734641402",
+          appId: "1:1007734641402:web:e980c715a364adb2132f43",
+          measurementId: "G-VLR5V8RF18"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        var msgTxt = document.getElementById('msgTxt');
+        var sender;
+        if(sessionStorage.getItem('sender')){
+            sender = sessionStorage.getItem('sender');
+        } else {
+            sender = prompt('PLEASE ENTER YOUR NAME');
+            sessionStorage.setItem('sender',sender);
+        }
+
+        module.sendMsg = function sendMsg(){
+            var msg = msgTxt.value;
+            var timestamp = new Date().getTime();
+            set(ref(db, "messages/"+timestamp),{
+                msg : msg,
+                sender : sender
+             })
+        }
+      </script>
+</body>
+</html>

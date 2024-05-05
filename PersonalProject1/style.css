@@ -1,0 +1,274 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#bodyType1 {
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+.bodyType2 {
+  background-image: url("images/playgame.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body header{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#displayBoard{
+  left: 28%;
+  position: absolute;
+  top: 34%;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.light{
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+
+.myAnswerLog {
+  position: absolute;
+  font-size: 1.3vw;
+  top: 21%;
+  font-weight: 500;
+}
+
+#red{
+  background-color: red;
+}
+
+#orange{
+  background-color: orange;
+}
+
+#green{
+  background-color: #00FF00;
+}
+
+#audioBox button{
+  position: absolute;
+  background-color: transparent;
+  width: 5%;
+  border: none;
+  top: 5%;
+  left: 10%;
+}
+
+#backspaceBtn {
+  position: absolute;
+  background-color: transparent;
+  width: 5%;
+  border: none;
+  top: 5%;
+  left: 17%;
+  opacity: 0.7;
+}
+
+#backspaceBtn:hover{
+  opacity: 1;
+}
+
+#audioBox img,
+#backspaceImg{
+  width: 100%
+}
+
+#soundOn{
+  opacity: 0.7;
+}
+
+#soundOn:hover{
+  opacity: 1;
+}
+
+#titleBox{
+  display: block;
+}
+
+#ballImgBox,
+#titleContentBox {
+  display: inline;
+}
+
+h1 {
+  position: absolute;
+  display: inline;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: 5vw;
+  line-height: 8vw;
+  top: 9%;
+  left: 38%;
+}
+
+#ballImg{
+  position: absolute;
+  top: 14%;
+  left: 18%;
+  width: 19%;
+}
+
+#logo {
+  position: relative;
+  width: 7.5%;
+  padding: 0px 12px;
+}
+
+#buttonBox{
+  height: 17%;
+  left: 34%;
+  top: 72%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+#startBtn,
+#manualBtn {
+  background-color: #cb99c5;
+  opacity: 0.85;
+  box-shadow: 0 4px 0 #AD83A8;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0;
+  padding: 2vw 2.5vw;
+  transition-duration: 0.1s;
+  font-size: 2vw;
+}
+
+
+#startBtn:hover,
+#manualBtn:hover{
+  opacity: 1;
+}
+
+#startBtn:active,
+#manualBtn:active {
+  margin-top: 4px;
+  box-shadow: none;
+}
+
+input#myAnswer {                /*숨겨진 인풋 태그*/
+  position: absolute;
+  z-index: 1;
+  top: -6vw;
+  width: 12.6vw;
+  height: 5vw;
+  left: 10vw;
+  font-size: 6vw;
+  font-weight: 1000;
+  border-radius: 10px;
+}
+
+img#batImg {                  /* 숨겨진 배트 이미지*/
+  width: 60%;
+  position: absolute;
+  bottom: 18%;
+  left: 4%;
+}
+
+#hiddenManual{                     /*숨겨진 설명서 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(images/manual.jpg);
+  border-radius: 44px;
+  padding: 1vw;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 16%;
+  left: 29%;
+  width: 35vw;
+  height: 35vw;
+}
+
+#manualHeader{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#manualHeader h3{
+  margin: 5%;
+  font-size: 2.4vw;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#cancelBtn{
+  background-color: transparent;
+  border-inline: hidden;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: -14px;
+  top: -7px;
+  border-width: inherit;
+}
+
+#cancelBtn img{
+  width: 24px;
+  opacity: 0.6;
+}
+
+#cancelBtn img:hover{
+  opacity: 5;
+}
+
+.hidden{
+  display: none;
+}
+
+#hiddenManual #explanationHead{
+  border-top: 1px solid black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1vw;
+  padding-top: 2vw;
+}
+
+
+.explanation{
+  text-align: center;
+  line-height: 3.5vw;
+  font-weight: bolder;
+  font-size: 1vw;
+}
+
+#detailExplanation{
+  color: blue;
+  line-height: 2.4vw;
+  padding: 0px 4vw;
+  font-weight: 1000;
+  font-size: 0.9vw;
+}

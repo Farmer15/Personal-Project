@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Calendar Project</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="imageBox">
+        <img src="images/vanilla_coding_logo.png" />
+      </div>
+    </header>
+    <main>
+      <div id="titleBox">
+        <h1>Calendar</h1>
+      </div>
+      <div id="calendarBox">
+        <div id="calendarTop">
+          <div id="searchBox">
+            <input type="date" id="dateSearch">
+            <button id="searchBtn">검색</button>
+          </div>
+          <div id="showTodayDate">
+          </div>  
+        </div>
+        <div id="calendarHead">
+          <div id="showClickDate">
+            2024/4/25
+          </div>
+          <div id="showYear">
+           
+          </div>
+          <div id="showMonth">
+            
+          </div>
+          <div id="takeNote">
+            <label for="memo">오늘 간단메모<button id="takeMemo">붙이기</button></label>
+            <textarea id="memo"></textarea>
+            <img src="images/memo.png">
+          </div>
+        </div>
+        <div id="calendarBody">
+          <div class="week sunday">SUN</div>
+          <div class="week">MON</div>
+          <div class="week">TUE</div>
+          <div class="week">WED</div>
+          <div class="week">THU</div>
+          <div class="week">FRI</div>
+          <div class="week">SAT</div>
+          <div class="sunday" data-title="0"></div>
+          <div data-title="1"></div>
+          <div data-title="2"></div>
+          <div data-title="3"></div>
+          <div data-title="4"></div>
+          <div data-title="5"></div>
+          <div data-title="6"></div>
+          <div class="sunday"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="sunday"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="sunday"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="sunday"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="sunday"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <button id="prevBtn" class="button">
+        <img src="images/prevBtn.png">
+      </button>
+      <button id="nextBtn" class="button">
+        <img src="images/nextBtn.png">
+      </button>
+    </main>
+   <script src="index.js"></script>
+  </body>
+</html>

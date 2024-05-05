@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Baseball Project(야구 게임)</title>
+  </head>
+
+  <body id="bodyType1" class="bodyType2">
+    <header>
+      <div id="image-box">
+        <img id="logo" src="images/vanilla_coding_logo.png" />
+      </div>
+      <div id="displayHiddenBox" class="hidden">
+        <div id="displayBoard" class="hidden">
+          <div class="light" data-title="0"></div>
+          <div class="light" data-title="1"></div>
+          <div class="light" data-title="2"></div>
+          <div class="light" data-title="3"></div>
+          <div class="light" data-title="4"></div>
+          <div class="light" data-title="5"></div>
+          <div class="light" data-title="6"></div>
+          <div class="light" data-title="7"></div>
+          <div class="light" data-title="8"></div>
+          <div class="light" data-title="9"></div>
+        </div>
+      </div>
+      <div id="audioBox">
+        <audio id="audio">
+          <source id="audioSrc" src="sounds/1.mp3">
+        </audio>
+        <button id="soundBtn">
+          <img id ="soundOn" class="" src="images/soundOff.png">
+          <img id ="soundOff"class="hidden" src="images/soundOn.png">
+        </button>
+      </div>
+      <div id="backspaceBox">
+        <button id="backspaceBtn"  class="hidden">
+          <img id="backspaceImg" src="images/backspace.png">
+        </button>
+      </div>
+    </header>
+    <main>
+      <div id="titleBox">
+        <div id="ballImgBox">
+          <img id="ballImg" src="images/ball_image2.png">
+        </div>
+        <div id="titleContentBox">
+          <h1>
+            Baseball<br>
+            G A M E
+          </h1>
+        </div>
+        
+      </div>
+      <div id="buttonBox">
+        <button id ="startBtn">
+          게임시작
+        </button>
+        <button id ="manualBtn">
+          게임설명
+        </button>
+        <div id="myAnswerBox">
+          <input id="myAnswer" type="hidden" maxlength="3">
+        </div>
+      </div>
+    </main>
+    <article>
+      <div id="hiddenManual" class="hidden">
+        <header id="manualHeader">
+          <h3>게임 설명</h1>
+          <button id="cancelBtn">
+            <img src="images/cancel_icon.png">
+          </button>
+        </header>
+        <p id="explanationHead">
+          이 게임은 서로 다른 3가지 숫자를 맞추는 게임 입니다.
+        </p>
+        <p class="explanation">
+          1. 게임 시작 버튼을 누르면 입력창이 나옵니다.<br>
+          2. 생각한 숫자 3개를 입력해줍니다.<br>
+          3. 입력한 숫자가 정답과 일치하는지 비교해서 알려줍니다.<br>
+        </p>
+        <p id="detailExplanation">
+            🟢스트라이크 : 입력한 숫자가 정답의 위치와 숫자가 모두 일치할 때<br>
+            🟠볼 : 입력한 숫자가 정답의 위치와 다르지만 숫자는 맞을 때<br>
+            🔴아웃 : 입력한 숫자가 정답과 일치하는게 없을 때<br>
+            홈런 : 입력한 숫자가 정답과 모두 일치할 때<br>
+        </p>
+        <p class="explanation">
+          4. 총 10번에 기회가 있고 그 전에 맞추면(홈런) 게임승리 입니다.
+        </p>
+      </div>
+    </article>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<img src="images/soundOff.png"

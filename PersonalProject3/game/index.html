@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>card game(화투 찾기)</title>
+  </head>
+  <body>
+    <header>
+      <div id="image-box">
+        <img id="logo" src="images/vanilla_coding_logo.png" />
+      </div>
+      <div id="timer">
+        남은 시간: 30
+      </div>
+      <div id="remainCards">
+        남은 카드 수: 8
+      </div>
+    </header>
+    <main>
+      <div>
+        <h3>족보</h3>
+        <img id="handRanking" src="images/HandRanking.png">
+      </div>
+      <div id="cardsBox">
+       <div class="cardBack"><img data-title="1땡" src="images/I.png"></div>
+       <div class="cardBack"><img data-title="1땡" src="images/I2.jpg"></div>
+       <div class="cardBack"><img data-title="2땡" src="images/II.jpg"></div>
+       <div class="cardBack"><img data-title="2땡" src="images/II2.png"></div>
+       <div class="cardBack"><img data-title="3땡" src="images/III.png"></div>
+       <div class="cardBack"><img data-title="3땡" src="images/III2.png"></div>
+       <div class="cardBack"><img data-title="4땡" src="images/IV.png"></div>
+       <div class="cardBack"><img data-title="4땡" src="images/IV2.png"></div>
+       <div class="cardBack"><img data-title="5땡" src="images/V.png"></div>
+       <div class="cardBack"><img data-title="5땡" src="images/V2.png"></div>
+       <div class="cardBack"><img data-title="8땡" src="images/VIII.webp"></div>
+       <div class="cardBack"><img data-title="8땡" src="images/VIII2.jpg"></div>
+       <div class="cardBack"><img data-title="9땡" src="images/IX.webp"></div>
+       <div class="cardBack"><img data-title="9땡" src="images/IX2.jpg"></div>
+       <div class="cardBack"><img data-title="장땡" src="images/X.png"></div>
+       <div class="cardBack"><img data-title="장땡" src="images/X2.png"></div>
+      </div>
+    </main>
+    <section>
+      <div id="audioBox">
+        <audio id="audio">
+          <source id="audioSrc" src="sound/Intro.mp4">
+        </audio>
+        <button id="soundBtn">
+          <img id ="soundOn" class="" src="images/soundOff.png">
+          <img id ="soundOff"class="hidden3" src="images/soundOn.png">
+        </button>
+      </div>
+      <div class="hidden3 win" id="lose">
+        <h1>당신은 밑장빼다 걸리셨습니다...게임실패</h1>
+        <button id="retryBtn">재시작</button>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

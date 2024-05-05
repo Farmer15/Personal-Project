@@ -1,0 +1,239 @@
+body {
+  background-image: url("images/bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+#imageBox {
+  height: 2vw;
+}
+
+#imageBox img{
+  position: relative;
+  top: 0.5vw;
+  left: 1vw;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: 72px;
+}
+
+#calendarBox{
+  background-color: aliceblue;
+  left: 24%;
+  top: 20%;
+  position: absolute;
+  width: 53%;
+  height: 79%;
+  border: 0px solid;
+}
+
+#calendarTop{
+  display: flex;
+  gap: 15%;
+  margin: 1%;
+}
+
+
+
+#dateSearch {
+  font-size: 0.9vw;
+}
+
+#searchBtn {
+  font-size: 0.8vw
+}
+
+#calendarHead{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 24%;
+}
+
+#showTodayDate {
+  background-color: cornsilk;
+  width: 27%;
+  text-align: center;
+  font-size: 1vw;
+  position: relative;
+  top: -0.4vw;
+  height: 1.5vw;
+}
+
+#showClickDate {
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  font-size: 2vw;
+  font-weight: 500;
+  color: gray;
+}
+
+#showYear{
+  font-size: 4vw;
+  height: 41%;
+  position: relative;
+  left: -2%;
+}
+
+#showMonth {
+  position: relative;
+  font-size: 9vw;
+  top: -11%;
+}
+
+#takeNote {
+  position: relative;
+  top: -23%;
+  height: 96%;
+  width: 14vw;
+}
+
+#takeNote label {
+  font-size: 0.8vw;
+  top: 4%;
+  position: relative;
+  z-index: 1;
+}
+
+#takeMemo{
+  font-size: 0.7vw;
+  top: -51%;
+  right: -189%;
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+#memo{
+  overflow: hidden;
+  border: none;
+  font-size: 0.8vw;
+  line-height: 1.2vw;
+  top: 4%;
+  width: 102%;
+  height: 81%;
+  resize: none;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+#memo:focus{
+  outline: 0;
+}
+
+#takeNote img {
+  position: absolute;
+  top: -28%;
+  right: -46%;
+  width: 187%;
+  height: 169%;
+}
+
+#calendarBody {
+  font-weight: 600;
+  top: -5%;
+  position: relative;
+  border: 1px solid;
+  height: 70%;
+  margin: 2% 4%;
+  display: grid;
+  grid-template: 
+  1fr repeat(6, 2fr) /
+  repeat(7, 1fr);
+  
+}
+
+#calendarBody *{
+  border: 1px solid black;
+  overflow: overlay;
+}
+
+.week {
+  background-color: cornsilk;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.sunday{
+  color: red;
+}
+
+
+.gray{
+  color: rgb(145, 141, 141);
+}
+
+.today{
+  color: blue;
+  font-size: 1.1vw;
+}
+
+#todayMemo {
+  color: black;
+  margin: 0;
+  border: none;
+  font-size: 0.7vw;
+  font-weight: bolder;
+}
+
+#prevBtn {
+  left: 19%;
+  top: 58%;
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  background: transparent;
+  border-radius: 50px;
+  border: none;
+}
+
+#prevBtn img {
+  left: -9%;
+  top: -9%;
+  position: absolute;
+  width: 118%;
+  opacity: 0.5;
+}
+
+#prevBtn img:hover,
+#nextBtn img:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+#nextBtn {
+  right: 18%;
+  top: 58%;
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  background: transparent;
+  border-radius: 50px;
+  border: none;
+}
+
+#nextBtn img {
+  width: 118%;
+  position: absolute;
+  top: -9%;
+  right: -9%;
+  opacity: 0.5;
+}

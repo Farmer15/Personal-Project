@@ -1,0 +1,143 @@
+body{
+  background-image: url(imgs/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 215%;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+#logo {
+  width: 9%;
+  margin: 0.4%;
+}
+
+#titleBox {
+  text-align: center;
+}
+
+#titleBox img {
+  position: absolute;
+  left: 25%;
+  width: 15%;
+}
+
+#title{
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 5vw;
+  line-height: 6vw;
+}
+
+img#cards {
+  position: absolute;
+  top: 47.5%;
+  left: 3%;
+  transform: scale(-1, 1);
+}
+
+#buttonBox{
+  height: 18%;
+  left: 34%;
+  top: 72%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+#startBtn,
+#manualBtn {
+  background-color: orange;
+  opacity: 0.9;
+  box-shadow: 0 4px #FF8000;
+  font-weight: 550;
+  border-radius: 10px;
+  border: 0;
+  padding: 2vw 2.5vw;
+  transition-duration: 0.1s;
+  font-size: 2vw;
+}
+
+
+#startBtn:hover,
+#manualBtn:hover{
+  opacity: 1;
+}
+
+#startBtn:active,
+#manualBtn:active {
+  margin-top: 4px;
+  box-shadow: none;
+}
+
+.hidden{
+  display: none;
+}
+
+#hiddenManual{                   
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  border-radius: 44px;
+  padding: 1vw;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 16%;
+  left: 29%;
+  width: 35vw;
+  height: 35vw;
+}
+
+#manualHeader{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#manualHeader h3{
+  margin: 3%;
+  font-size: 2vw;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#cancelBtn{
+  background-color: transparent;
+  border-inline: hidden;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: -14px;
+  top: -7px;
+  border-width: inherit;
+}
+
+#cancelBtn img{
+  width: 24px;
+  opacity: 0.6;
+}
+
+#cancelBtn img:hover{
+  opacity: 5;
+}
+
+#hiddenManual #explanationHead{
+  border-top: 1px solid black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.3vw;
+  padding-top: 2vw;
+}
+
+
+.explanation{
+  text-align: center;
+  line-height: 5vw;
+  font-weight: bolder;
+  font-size: 1vw;
+}

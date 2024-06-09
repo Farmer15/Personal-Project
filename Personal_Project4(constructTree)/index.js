@@ -8,7 +8,7 @@ async function addNode(event) {
   event.preventDefault();
   const newNodeValue = event.target[0].value;
 
-  if(!newNodeValue || newNodeValue[0] === "0") return;
+  if(!newNodeValue || (newNodeValue[0] === "0" && newNodeValue.length !== 1)) return;
 
   const newNode = makeNode(newNodeValue);
   const nodeArray =   [...nodeArrayLike].map((tag) => +tag.textContent);
@@ -58,11 +58,11 @@ function insertNodeToBST(root, val) {
 }
 
 function makeLeftRightSequenceArray(root, value) {
-  const resultArray = ["downSequence"];
+  const resultArray = [["downSequence", 1]];
 
-  return cycleBST(root, value);
+  return cycleBST(root, value, 1);
 
-  function cycleBST(root, value) {
+  function cycleBST(root, value, count) {
     if (!root) {
       return resultArray;
     }
@@ -72,28 +72,29 @@ function makeLeftRightSequenceArray(root, value) {
     }
 
     if (root.val <= value) {
-      resultArray.push("rightSequence");
-      return cycleBST(root.right, value);
+      resultArray.push(["rightSequence", count + 1]);
+      return cycleBST(root.right, value, count + 1);
     } else {
-      resultArray.push("leftSequence");
-      return cycleBST(root.left, value);
+      resultArray.push(["leftSequence", count + 1]);
+      return cycleBST(root.left, value, count + 1);
     }
   }
 }
 
 async function moveNode(sequenceArr, tag) {
   let index = 0;
-  let posX = 750;
+  let posX = 825;
   let posY = 50;
-
+ 
+  console.log(sequenceArr);
   while (index < sequenceArr.length) {
     const currentSequence = sequenceArr[index];
 
-    switch (currentSequence) {
+    switch (currentSequence[0]) {
       case "downSequence":
         const downSequence = new Promise((resolve) => {
           setTimeout(() => {
-            posY += 60;
+            posY += 50;
             tag.style.transform = `translate(${posX}px, ${posY}px)`;
             resolve();
           }, 0);
@@ -105,8 +106,8 @@ async function moveNode(sequenceArr, tag) {
       case "rightSequence":
         const rightSequence = new Promise((resolve) => {
           setTimeout(() => {
-            posX += 100
-            posY += 50;
+            posX += 825 / 2 ** (currentSequence[1] - 1);
+            posY += 80;
             tag.style.transform = `translate(${posX}px, ${posY}px)`;
             resolve();
           }, 1000);
@@ -118,8 +119,8 @@ async function moveNode(sequenceArr, tag) {
       case "leftSequence":
         const leftSequence = new Promise((resolve) => {
           setTimeout(() => {
-            posX -= 100
-            posY += 50;
+            posX -= 825 / 2 ** (currentSequence[1] - 1);
+            posY += 80;
             tag.style.transform = `translate(${posX}px, ${posY}px)`;
             resolve();
           }, 1000);
